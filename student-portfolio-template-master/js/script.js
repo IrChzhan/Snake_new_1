@@ -6,6 +6,7 @@ let velocityX = 0,
     velocityY = 0;
 let snakeBody = [];
 let score = 0;
+var yourScoreElement = document.getElementById("yourScore");
 
 const storageKeys = {
     highScore: 'snake:high_score',
@@ -135,6 +136,7 @@ const initGame = () => {
 
     if (isGameOver(snakeX, snakeY)) {
         document.dispatchEvent(new CustomEvent('snake:game_over'));
+        yourScoreElement.textContent = score;
         return;
     }
 
