@@ -136,7 +136,7 @@ const initGame = () => {
 
     if (isGameOver(snakeX, snakeY)) {
         document.dispatchEvent(new CustomEvent('snake:game_over'));
-        yourScoreElement.textContent = score;
+        yourScoreElement.textContent = score; //изменение
         return;
     }
 
